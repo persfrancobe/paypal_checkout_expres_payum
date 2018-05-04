@@ -1,0 +1,16 @@
+payum:
+    security:
+        token_storage:
+            App\Entity\PaymentToken: { doctrine: orm }
+
+    storages:
+        App\Entity\Payment: { doctrine: orm }
+        App\Entity\PaymentDetails: { doctrine: orm }
+
+    gateways:
+        paypal:
+            factory: paypal_express_checkout
+            username:  'ehsan-facilitator_api1.bugiweb.com'
+            password:  'J7NR9V5QJ29B7ASP'
+            signature: 'AXX7mYPHH9rMLBowrRHQ7VwXTiyqAZFTlmhHvAAaW21AlEH2WuoGEE0J'
+            sandbox: true
